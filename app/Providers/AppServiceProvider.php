@@ -3,7 +3,9 @@
 namespace App\Providers;
 
 use Fruitcake\TelescopeToolbar\ToolbarServiceProvider;
+use Illuminate\Http\Response;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Pennant\Middleware\EnsureFeaturesAreActive;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -30,6 +32,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        EnsureFeaturesAreActive::whenInactive(
+            fn () => abort(Response::HTTP_NOT_FOUND),
+        );
     }
 }

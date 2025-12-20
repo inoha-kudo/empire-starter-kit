@@ -7,11 +7,20 @@ namespace App\Enums;
 use Empire\Hello\Modules\HelloModule;
 use Empire\Ping\Modules\PingModule;
 use Illuminate\Support\Facades\Route;
+use Laravel\Pennant\Feature;
+use Laravel\Pennant\Middleware\EnsureFeaturesAreActive;
 
 enum Module: string
 {
     case Hello = HelloModule::class;
     case Ping = PingModule::class;
+
+    public static function defineFeatures(): void
+    {
+        foreach (self::cases() as $module) {
+            Feature::define($module->value, true);
+        }
+    }
 
     public static function loadWebRoutes(): void
     {
@@ -19,7 +28,10 @@ enum Module: string
             $webRoute = $module::webRoute();
             assert(is_string($webRoute));
 
-            Route::middleware('web')->group($webRoute);
+            Route::middleware([
+                EnsureFeaturesAreActive::using($module),
+                'web',
+            ])->group($webRoute);
         }
     }
 
@@ -29,7 +41,10 @@ enum Module: string
             $apiRoute = $module::apiRoute();
             assert(is_string($apiRoute));
 
-            Route::middleware('api')->prefix('api')->group($apiRoute);
+            Route::middleware([
+                EnsureFeaturesAreActive::using($module),
+                'api',
+            ])->prefix('api')->group($apiRoute);
         }
     }
 
