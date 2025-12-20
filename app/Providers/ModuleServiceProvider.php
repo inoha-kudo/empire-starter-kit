@@ -11,9 +11,16 @@ final class ModuleServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
+        $this->defineFeatures();
+
         $this->loadWebRoutes();
         $this->loadApiRoutes();
         $this->loadConsoleRoutes();
+    }
+
+    private function defineFeatures(): void
+    {
+        Module::defineFeatures();
     }
 
     private function loadWebRoutes(): void
