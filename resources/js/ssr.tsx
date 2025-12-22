@@ -10,7 +10,18 @@ createServer((page) =>
         page,
         render: ReactDOMServer.renderToString,
         title: (title) => (title ? `${title} - ${appName}` : appName),
-        resolve: (name) => resolvePageComponent(`./pages/${name}.tsx`, import.meta.glob('./pages/**/*.tsx')),
+        resolve: (name) => {
+            if (name.includes('::')) {
+                const [module, page] = name.split('::');
+
+                return resolvePageComponent(
+                    `../../vendor/empire/${module}/resources/js/pages/${page}.tsx`,
+                    import.meta.glob('../../vendor/empire/*/resources/js/pages/**/*.tsx'),
+                );
+            } else {
+                return resolvePageComponent(`./pages/${name}.tsx`, import.meta.glob('./pages/**/*.tsx'));
+            }
+        },
         setup: ({ App, props }) => <App {...props} />,
     }),
 );

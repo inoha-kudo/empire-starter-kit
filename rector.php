@@ -9,6 +9,8 @@ use RectorLaravel\Set\LaravelLevelSetList;
 return RectorConfig::configure()
     ->withPaths([
         __DIR__.'/app',
+        __DIR__.'/app-modules/*/src',
+        __DIR__.'/modules/*/src',
     ])
     ->withSets([
         LevelSetList::UP_TO_PHP_85,
