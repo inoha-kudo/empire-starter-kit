@@ -16,6 +16,8 @@ pest()->extend(Tests\TestCase::class)
     ->in(
         'Feature',
         'Browser',
+        '../app-modules/*/tests/Feature',
+        '../app-modules/*/tests/Browser',
     );
 
 /*

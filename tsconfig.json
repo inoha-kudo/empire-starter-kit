@@ -117,5 +117,8 @@
         "resources/js/**/*.ts",
         "resources/js/**/*.d.ts",
         "resources/js/**/*.tsx",
+        "vendor/empire/*/resources/js/**/*.ts",
+        "vendor/empire/*/resources/js/**/*.d.ts",
+        "vendor/empire/*/resources/js/**/*.tsx",
     ]
 }
