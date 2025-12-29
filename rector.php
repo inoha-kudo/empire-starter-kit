@@ -11,6 +11,6 @@ return RectorConfig::configure()
         __DIR__.'/app',
     ])
     ->withSets([
-        LevelSetList::UP_TO_PHP_84,
+        LevelSetList::UP_TO_PHP_85,
         LaravelLevelSetList::UP_TO_LARAVEL_120,
     ]);
