@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Fruitcake\TelescopeToolbar\ToolbarServiceProvider;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -16,6 +17,10 @@ class AppServiceProvider extends ServiceProvider
             if (class_exists(\Laravel\Telescope\TelescopeServiceProvider::class)) {
                 $this->app->register(\Laravel\Telescope\TelescopeServiceProvider::class);
                 $this->app->register(TelescopeServiceProvider::class);
+            }
+
+            if (class_exists(ToolbarServiceProvider::class)) {
+                $this->app->register(ToolbarServiceProvider::class);
             }
         }
     }
