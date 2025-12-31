@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56d2fefdfa46e230755ff9ad07e5eb3c",
+    "content-hash": "9dccf02695720360293a15e5f3e377ce",
     "packages": [
         {
             "name": "brick/math",
@@ -507,6 +507,36 @@
                 }
             ],
             "time": "2025-03-06T22:45:56+00:00"
+        },
+        {
+            "name": "empire/hello",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inoha-kudo/empire-hello.git",
+                "reference": "96d1b4b0f6eb8f657c8869ea3179242a3950924e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inoha-kudo/empire-hello/zipball/96d1b4b0f6eb8f657c8869ea3179242a3950924e",
+                "reference": "96d1b4b0f6eb8f657c8869ea3179242a3950924e",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Empire\\Hello\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "support": {
+                "issues": "https://github.com/inoha-kudo/empire-hello/issues",
+                "source": "https://github.com/inoha-kudo/empire-hello/tree/1.0.0"
+            },
+            "time": "2026-01-03T03:32:23+00:00"
         },
         {
             "name": "fruitcake/php-cors",

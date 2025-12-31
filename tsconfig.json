@@ -110,6 +110,7 @@
         "baseUrl": ".",
         "paths": {
             "@/*": ["./resources/js/*"],
+            "@hello/*": ["./vendor/empire/hello/resources/js/*"],
         },
         "jsx": "react-jsx"
     },
