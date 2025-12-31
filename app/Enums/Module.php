@@ -5,11 +5,13 @@ declare(strict_types=1);
 namespace App\Enums;
 
 use Empire\Hello\Modules\HelloModule;
+use Empire\Ping\Modules\PingModule;
 use Illuminate\Support\Facades\Route;
 
 enum Module: string
 {
     case Hello = HelloModule::class;
+    case Ping = PingModule::class;
 
     public static function loadWebRoutes(): void
     {
