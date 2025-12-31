@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9dccf02695720360293a15e5f3e377ce",
+    "content-hash": "2147f985e5afd3b4f446a6e04579dbc6",
     "packages": [
         {
             "name": "brick/math",
@@ -537,6 +537,39 @@
                 "source": "https://github.com/inoha-kudo/empire-hello/tree/1.0.0"
             },
             "time": "2026-01-17T14:42:56+00:00"
+        },
+        {
+            "name": "empire/ping",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inoha-kudo/empire-ping.git",
+                "reference": "1a9993d210c786240a44ad426107966d58884c6c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inoha-kudo/empire-ping/zipball/1a9993d210c786240a44ad426107966d58884c6c",
+                "reference": "1a9993d210c786240a44ad426107966d58884c6c",
+                "shasum": ""
+            },
+            "require": {
+                "miraiportal/ping": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Empire\\Ping\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "support": {
+                "issues": "https://github.com/inoha-kudo/empire-ping/issues",
+                "source": "https://github.com/inoha-kudo/empire-ping/tree/1.0.0"
+            },
+            "time": "2026-01-03T03:39:38+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -2181,6 +2214,42 @@
                 }
             ],
             "time": "2025-12-07T16:03:21+00:00"
+        },
+        {
+            "name": "miraiportal/ping",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inoha-kudo/ping.git",
+                "reference": "cef9e7895769ccff9c21a7b840f26304e2a3e791"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inoha-kudo/ping/zipball/cef9e7895769ccff9c21a7b840f26304e2a3e791",
+                "reference": "cef9e7895769ccff9c21a7b840f26304e2a3e791",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^12.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Miraiportal\\Ping\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "support": {
+                "issues": "https://github.com/inoha-kudo/ping/issues",
+                "source": "https://github.com/inoha-kudo/ping/tree/1.0.0"
+            },
+            "time": "2025-11-22T15:39:53+00:00"
         },
         {
             "name": "monolog/monolog",
