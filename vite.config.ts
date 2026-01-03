@@ -3,6 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import laravel from 'laravel-vite-plugin';
 import { defineConfig } from 'vite';
+import webfontDownload from 'vite-plugin-webfont-dl';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
@@ -22,6 +23,7 @@ export default defineConfig({
             formVariants: true,
         }),
         tsconfigPaths(),
+        webfontDownload('https://fonts.bunny.net/css?family=instrument-sans:400,500,600'),
     ],
     esbuild: {
         jsx: 'automatic',
